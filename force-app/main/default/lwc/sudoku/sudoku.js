@@ -37,6 +37,7 @@ export default class Sudoku extends LightningElement {
 		setGameBlock(){
 				
 				this.isGameCompleted = false;
+				this.totalHints = 3;
 				this.tempArray = new Array(9);
 				for(let i = 0; i < 9; i++)
 						this.tempArray[i] = i+1;
