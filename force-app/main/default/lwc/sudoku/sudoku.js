@@ -9,11 +9,6 @@ export default class Sudoku extends LightningElement {
 		@track gameBlockToShow;
 		isGameCompleted = false;
 		
-		// constructor(){
-		// 		super();
-		// 		this.template.addEventListener('onkeyup', this.handleChange);
-		// }
-		
 		connectedCallback(){
 				console.log('COnnected callback');
 				this.template.addEventListener('onkeyup', evt => {
@@ -360,6 +355,8 @@ export default class Sudoku extends LightningElement {
 										if(item.class === 'selected'){
 												if(item.label === ''){
 														item.label = this.gameBlock[indexx][indexy];
+														item.class = 'default';
+														item.default = true;
 														this.totalHints -= 1;
 												}
 										}
